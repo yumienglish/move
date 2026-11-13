@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Đang chuyển…</title>
+<meta name="robots" content="noindex">
+<script>
+// Nhận tiến độ đã lưu ở địa chỉ cũ (miathoday.github.io) → lưu vào địa chỉ mới, KHÔNG ghi đè mục máy đã có.
+var q = {}; location.hash.slice(1).split('&').forEach(function (x) { var i = x.indexOf('='); if (i > 0) try { q[x.slice(0, i)] = decodeURIComponent(x.slice(i + 1)); } catch (e) {} });
+try { var d = JSON.parse(q.d || '{}'); for (var k in d) if (/^(btvn-|yumiLib\.|vy-grammar-path|hoctap_)/.test(k) && typeof d[k] === 'string' && localStorage.getItem(k) === null) localStorage.setItem(k, d[k]); } catch (e) {}
+var to = q.to || 'https://yumienglish.github.io/ielts-homework/';
+if (to.indexOf('https://yumienglish.github.io/') !== 0 || to.indexOf('https://yumienglish.github.io/move/') === 0) to = 'https://yumienglish.github.io/ielts-homework/';
+location.replace(to);
+</script></head><body style="font-family:system-ui,sans-serif;text-align:center;margin-top:20vh;color:#4b3a46">Đang chuyển…</body></html>
